@@ -25,4 +25,4 @@ ICMS: R$ 324,00; IPI: R$72,00; PIS: R$33,48; COFINS: R$153,72; Total: R$ 2383,20
 
 Total Impostos: R$ 1.093,50
 Total Mercadorias: R$ 3.375,00
-Total Geral:    R$ 4.4468,49
+Total Geral:    R$ 4.468,49
