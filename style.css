@@ -5,4 +5,21 @@
 body{
     background-color: rgb(255, 246, 118); 
     text-align: center; 
+    background-image: url('https://static.vecteezy.com/ti/vetor-gratis/t1/5390683-mao-desenhada-flor-rosa-com-folha-natural-isolado-preto-botanico-linha-ilustracao-arte-vetor.jpg');
+   
 }    
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .card{
+    background-color: #f7f89fe0;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    width: 400px;
+  }
+ 
