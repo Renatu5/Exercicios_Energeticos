@@ -1,19 +1,21 @@
-function Imposto(inputQuantidade) {
-
-    let calculo = 4.50 * inputQuantidade
-    let imposto = 0
-    let valorImposto = [18, 4, 1.86, 8.54]
-    let arrayMap = valorImposto.map(
-        valor => valor / 100 * calculo
-    )
-    console.log(arrayMap)
-    for (let i = 0; i < valorImposto.length; i++) {
-        let pushe = valorImposto[i] / 100 * calculo
-        imposto += pushe
-        console.log(imposto)
-    }
-    return (calculo + imposto).toFixed(2)
+function calculo(percentual, valor) {
+    let valorImposto = percentual / 100 * valor
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorImposto)
 
 }
+function Imposto(quantidade, valorDaMercadoria) {
 
-console.log(Imposto(350))
+    let valorTotal = valorDaMercadoria * quantidade
+    let valorImposto = [{ ICMS: 18, IPI: 4, PIS: 1.86, COFINS: 8.54 }]
+    let impostoCobrado = {
+        ICMS: calculo(valorImposto.ICMS, valorTotal),
+        IPI: calculo(valorImposto.IPI, valorTotal),
+        PIS: calculo(valorImposto.PIS, valorTotal),
+        COFINS: calculo(valorImposto.COFINS, valorTotal)
+    }
+    return impostoCobrado
+}
+
+console.log(Imposto(350, 4.50))
+
+export default Imposto
